@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">RentSweep</string>
+    <string name="title_activity_main">RentSweep</string>
+    <string name="package_name">au.com.rentsweep.app</string>
+    <string name="custom_url_scheme">au.com.rentsweep.app</string>
+</resources>
