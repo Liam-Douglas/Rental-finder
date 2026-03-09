@@ -1,0 +1,32 @@
+{
+  "appId": "au.com.rentsweep.app",
+  "appName": "RentSweep",
+  "webDir": "dist",
+  "bundledWebRuntime": false,
+  "server": {
+    "androidScheme": "https"
+  },
+  "ios": {
+    "contentInset": "automatic",
+    "backgroundColor": "#0f172a",
+    "scrollEnabled": false
+  },
+  "android": {
+    "backgroundColor": "#0f172a",
+    "allowMixedContent": false
+  },
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 2000,
+      "launchAutoHide": true,
+      "backgroundColor": "#0f172a",
+      "iosSpinnerStyle": "large",
+      "spinnerColor": "#6366f1",
+      "showSpinner": true
+    },
+    "StatusBar": {
+      "style": "dark",
+      "backgroundColor": "#0f172a"
+    }
+  }
+}

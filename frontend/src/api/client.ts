@@ -1,7 +1,13 @@
 import axios from "axios";
 import type { Listing, Stats, Filters } from "../types/listing";
 
-const api = axios.create({ baseURL: "/api" });
+// In Capacitor builds, set VITE_API_URL to your backend's LAN/server address
+// e.g. VITE_API_URL=http://192.168.1.100:8000
+const BASE = import.meta.env.VITE_API_URL
+  ? `${import.meta.env.VITE_API_URL}/api`
+  : "/api";
+
+const api = axios.create({ baseURL: BASE });
 
 export function buildListingParams(filters: Filters, extra: Record<string, unknown> = {}) {
   const params: Record<string, unknown> = { ...extra };
@@ -33,7 +39,7 @@ export const listingsApi = {
     api.patch(`/listings/${id}/notes`, null, { params: { notes } }).then((r) => r.data),
 
   exportCsv: () => {
-    window.open("/api/listings/export/csv", "_blank");
+    window.open(`${BASE}/listings/export/csv`, "_blank");
   },
 };
 
